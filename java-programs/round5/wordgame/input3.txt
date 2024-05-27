@@ -1,0 +1,16 @@
+init 321 5
+char a
+char i
+char s
+char n
+char c
+char p
+char e
+char z
+check
+init 987 2
+check
+char i
+char s
+char a
+char e

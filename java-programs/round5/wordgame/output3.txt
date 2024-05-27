@@ -1,0 +1,32 @@
+Initializing a new game with 321 and 5.
+Guessing 'a'.
+  Word: ______ (1/5 wrong guesses, 6 missing chars left)
+Guessing 'i'.
+  Word: ______ (2/5 wrong guesses, 6 missing chars left)
+Guessing 's'.
+  Word: s_____ (2/5 wrong guesses, 5 missing chars left)
+Guessing 'n'.
+  Word: sn____ (2/5 wrong guesses, 4 missing chars left)
+Guessing 'c'.
+  Word: sn____ (3/5 wrong guesses, 4 missing chars left)
+Guessing 'p'.
+  Word: sn____ (4/5 wrong guesses, 4 missing chars left)
+Guessing 'e'.
+  Word: snee_e (4/5 wrong guesses, 1 missing chars left)
+Guessing 'z'.
+  Word: sneeze (4/5 wrong guesses, 0 missing chars left)
+  The player won!
+Checking game state.
+  A game is NOT currently active.
+Initializing a new game with 987 and 2.
+Checking game state.
+  A game is currently active.
+Guessing 'i'.
+  Word: ____ (1/2 wrong guesses, 4 missing chars left)
+Guessing 's'.
+  Word: __ss (1/2 wrong guesses, 2 missing chars left)
+Guessing 'a'.
+  Word: __ss (2/2 wrong guesses, 2 missing chars left)
+Guessing 'e'.
+  Word: loss (3/2 wrong guesses, 2 missing chars left)
+  The player lost!

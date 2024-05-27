@@ -1,0 +1,140 @@
+
+* {
+  margin: 0;
+  border-collapse: collapse;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-rows: min-content auto min-content;
+  /* TODO: modify the line below to add the needed grid-template-areas for header, main, and footer elements*/
+  grid-template-areas:  "h h h"
+                        "m m m"
+                        "f f f";
+  height: 100vh;
+}
+
+main {
+  background-color: antiquewhite;
+  width: 100%;
+  height: 100%;
+  grid-area: m;
+}
+
+header {
+  background-color: lavender;
+  width: 100%;
+  padding: 1.5rem;
+  grid-area: h;
+}
+
+article {
+  background-color: lightblue;
+  border: solid;
+  margin: 0;
+  display: grid;
+  /* TODO: modify the line below to add the needed grid-template-areas for sections and articles.
+  
+  For placing areas side-by-side, the syntax is simple, for example:
+    grid-template-areas:    "a1 b1"
+                            "a2 b2";
+  */
+  grid-template-areas:    "s1 a1"
+                          "s2 a2"
+                          "s3 m";
+  height: 100%;
+}
+
+section {
+  border: solid;
+  box-sizing: border-box; /*oli kommentoituna aluksi*/
+  margin: 0;
+}
+
+aside {
+  border: solid;
+  box-sizing: border-box; /*oli kommentoituna aluksi*/
+  background-color: cornflowerblue;
+  margin: 0;
+}
+
+footer {
+  background-color: darkslategray;
+  grid-area: f;
+  display: grid;
+  /* TODO: modify the line below to add the needed grid-template-areas for the navigation elements*/
+  grid-template-areas:  "n1 n2";
+  padding: 1.5rem;
+}
+
+
+/* TODO: add the needed CSS rules below to set the required grid-area for each element with an ID, including the sections, asides, and navigation elements. 
+
+An example:
+#element_id {
+    grid-area: ONE_OF_GRID_TEMPLATE_AREAS;
+}
+
+*/
+
+#sec1 {
+  grid-area: s1;
+}
+#sec2 {
+  grid-area: s2;
+}
+#sec3 {
+  grid-area: s3;
+}
+
+#aside1 {
+  grid-area: a1;
+}
+#aside2 {
+  grid-area: a2;
+}
+
+#nav1 {
+  grid-area: n1;
+}
+
+#nav2 {
+  grid-area: n2;
+}
+
+@media only screen and (max-width: 600px) {
+  article {
+    height: 100%;
+    grid-template-areas:  "s1" 
+                        "s2"
+                        "s3"
+                        "a1"
+                        "a2"
+                        "n1"
+                        "n2";
+  }
+}
+
+/*if the size is phone or tablet, elements are set in two columns, the order remains the same, however, nav elements must go to a separate row*/
+
+@media only screen and (min-width: 600px)  and (max-width: 767px)  {
+  article {
+    height: 100%;
+    grid-template-areas:  "s1 s2" 
+                        "s3 a1" 
+                        "a2 m"
+                        "n1 n2";
+  }
+}
+
+/*if size >tablet, elements are set in three columns. Now, the order changes a bit: first row consists of s1, s2, and s3, next row of a1, a2, and an empty space; the last row of n1, n2, and an empty space. Three columns in each row.*/
+
+@media only screen and (min-width: 768px)  {
+  article {
+    height: 100%;
+    grid-template-areas:  "s1 s2 s3"
+                        "a1 m a2"
+                        "n1 m n2";
+  }
+}
